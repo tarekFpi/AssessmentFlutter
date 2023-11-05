@@ -1,6 +1,5 @@
 
 import 'dart:async';
-
 import 'package:assessment/core/features/auth/login_controller.dart';
 import 'package:assessment/core/features/nav/nav_screen.dart';
 import 'package:assessment/core/features/theme/color_scheme.dart';
@@ -49,29 +48,17 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   void initState() {
 
-    checkRememberPassword();
 
-    //checkAuthState();
+    checkRememberPassword();
 
     super.initState();
   }
 
-  void checkAuthState() async {
-
-    Timer(Duration(seconds: 3), () {
-
-      if(authController.isLoggedIn()){
-
-        Get.offAll(() => NavScreen());
-
-      }
-    });
-  }
 
   final storage = GetStorage();
 
   void checkRememberPassword() {
-    final savePhone = storage.read("phone");
+    final savePhone = storage.read("login");
     final savePin = storage.read("pin");
 
     setState(() {
