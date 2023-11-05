@@ -1,1 +1,1 @@
-const BASE_URL = "https://hp-api.onrender.com/";
+const BASE_URL = "https://peanut.ifxdb.com";

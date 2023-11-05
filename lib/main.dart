@@ -1,4 +1,4 @@
-import 'package:assessment/core/features/task/task_list_screen.dart';
+import 'package:assessment/core/features/auth/login_screen.dart';
 import 'package:assessment/core/features/theme/app_theme.dart';
 import 'package:assessment/core/features/utils/hexcolor.dart';
 import 'package:flutter/material.dart';
@@ -11,12 +11,8 @@ import 'package:oktoast/oktoast.dart';
 void main() async{
 
   await GetStorage.init();
-  WidgetsFlutterBinding.ensureInitialized();
-  await FlutterDownloader.initialize(
-      debug: true // optional: set false to disable printing logs to console
-  );
 
-  runApp(const MyApp());
+  runApp(MyApp());
 
   configLoading();
 }
@@ -42,7 +38,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: AppTheme.lightTheme(),
         themeMode: ThemeMode.light,
-        home:TaskListScreen(),
+        home:LoginScreen(),
         builder: EasyLoading.init(),
       ),
     );
