@@ -50,7 +50,7 @@ class _UserListScreenState extends State<UserListScreen> {
                   fillColor: Colors.white38,
                   filled: true,
                   contentPadding: EdgeInsets.all(16),
-                  hintText: "Search...For..Login",
+                  hintText: "Search...For..Date",
                   prefixIcon: Icon(
                     Icons.search,
                     color: HexColor('#855EA9'),

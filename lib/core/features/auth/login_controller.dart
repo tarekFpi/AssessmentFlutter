@@ -64,8 +64,6 @@ class AuthController extends GetxController{
 
       EasyLoading.show(dismissOnTap: false, maskType: EasyLoadingMaskType.custom);
 
-    //  await dioClient.post("/api/v1/logout");
-
       Get.offAll(() =>  LoginScreen());
 
       storage.remove("user_token");
@@ -78,6 +76,7 @@ class AuthController extends GetxController{
       Toast.errorToast(e.toString());
     }
   }
+
 
   bool isLoggedIn(){
     if(storage.read("user_token") != null) return true;
